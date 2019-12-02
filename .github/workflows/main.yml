@@ -5,15 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-    - name: Hello world action step
-      id: hello
-      uses: /action@v1
-      with:
-        who-to-greet: 'Yosuke'
-    # Use the output from the `hello` step
-    - name: Get the output time
-      run: echo "The time was ${{ steps.hello.outputs.time }}"
-      
     - name: Slack Notification
       uses: rtCamp/action-slack-notify@master
       env:
